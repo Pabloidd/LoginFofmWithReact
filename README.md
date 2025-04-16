@@ -20,7 +20,7 @@ React-приложение с формой регистрации, создан�
 
 1.  Клонируйте репозиторий:
 ```
-  git clone https://github.com/Pabloidd/login-form-with-react.git
+  git clone https://github.com/Pabloidd/LoginFofmWithReact.git
 ```
 
 2. Перейдите в директорию проекта:
