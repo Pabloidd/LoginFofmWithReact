@@ -55,37 +55,37 @@ yarn start
 
 ▌Структура проекта
 ```
-LoginFofmWithReact
-├── .idea
+LoginFofmWithReact/
+├── .idea/
 │  ├── .gitignore
 │  ├── LoginFofmWithReact.iml
 │  ├── modules.xml
 │  ├── vcs.xml
 │  └── workspace.xml
-└── registration-form
-  ├── node_modules
-  ├── public
-  │  ├── index.html
-  │  ├── manifest.json
-  │  └── robots.txt
-  └── src
-    ├── components
-    │  ├── GreetingSection.jsx
-    │  ├── LoginSection.jsx
-    │  ├── RegistrationForm.jsx
-    │  └── RegistrationFormPage.jsx
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    ├── index.css
-    ├── index.js
-    ├── reportWebVitals.js
-    ├── setupTests.js
-    ├── .gitignore
-    ├── package.json
-    ├── package-lock.json
-    ├── README.md
-    └── LICENSE
+├── registration-form/
+│  ├── node_modules/ (library root)
+│  ├── public/
+│  │  ├── index.html
+│  │  ├── manifest.json
+│  │  └── robots.txt
+│  └── src/
+│    ├── components/
+│    │  ├── GreetingSection.jsx
+│    │  ├── LoginSection.jsx
+│    │  ├── RegistrationForm.jsx
+│    │  └── RegistrationFormPage.jsx
+│    ├── App.css
+│    ├── App.js
+│    ├── App.test.js
+│    ├── index.css
+│    ├── index.js
+│    ├── reportWebVitals.js
+│    └── setupTests.js
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+└── LICENSE
 ```
 
 ▌Конфигурация
