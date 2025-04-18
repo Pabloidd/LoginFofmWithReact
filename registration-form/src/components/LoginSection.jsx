@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 
 export default function LoginSection() {
 
-    const SERVER_URL = "http://localhost:3001";
+    const SERVER_URL = "https://localhost:3001";
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const MAX_EMAIL_LENGTH = 127;
     const MAX_PASSWORD_LENGTH = 31;
     const MIN_PASSWORD_LENGTH = 6;
+
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
@@ -22,6 +23,11 @@ export default function LoginSection() {
         return emailRegex.test(email);
     };
 
+    const validatePassword = (password) =>{
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)$/;
+        return passwordRegex.test(password);
+    };
+
     const sendLoginFormData = async (email, password) => {
         try {
             const response = await fetch(SERVER_URL, {
@@ -33,7 +39,7 @@ export default function LoginSection() {
             });
 
             if (response.ok) {
-                console.log(`Успешно отправлены данные: ${email}, ${password}`);
+                console.log(`Успешно отправлены данные.`);
                 return response;
             } else {
                 console.error("Ошибка:", response.status, response.statusText);
@@ -72,6 +78,9 @@ export default function LoginSection() {
             isValid = false;
         } else if (password.length < MIN_PASSWORD_LENGTH) {
             errorMessage += `Пароль должен содержать не менее ${MIN_PASSWORD_LENGTH} символов \n`;
+            isValid = false;
+        } else if(!validatePassword(password)) {
+            errorMessage += 'Пароль должен содержать заглавные и строчные буквы, специальные символы, цифры \n';
             isValid = false;
         }
 
